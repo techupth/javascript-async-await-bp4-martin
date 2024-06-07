@@ -41,9 +41,4 @@ function dataOrder(order) {
   console.log(order);
 };
 
-getJohnProfile().then((profile) => {
-    data(profile);
-    return getJohnOrders();
-  }).then((orders) => {
-    dataOrder(orders);
-  });
+getJohnProfile().then(data).then(getJohnOrders).then(dataOrder);
